@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تأكيد الطلب</title>
+</head>
+<body>
+    <h1>تم تقديم الطلب بنجاح</h1>
+    <p>شكرًا لك على تقديم المعلومات. تم استلام البيانات بنجاح.</p>
+
+    <script>
+        // استخراج البيانات من عنوان الصفحة (URL)
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get("name");
+        const email = urlParams.get("email");
+
+        // يمكنك استخدام البيانات فيما تشاء هنا (على سبيل المثال، إرسالها إلى خادم أو تخزينها)
+
+        // تنظيف عنوان الصفحة لعدم إظهار البيانات المدخلة للمستخدم
+        history.replaceState({}, document.title, window.location.pathname);
+    </script>
+</body>
+</html>
